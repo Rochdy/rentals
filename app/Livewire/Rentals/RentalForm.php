@@ -23,7 +23,7 @@ class RentalForm extends Component
     #[Validate('required|numeric|min:0')]
     public float $price;
 
-    #[Validate('nullable|image|max:1000')]
+    #[Validate('required|image|max:1000')]
     public $image;
 
     public ?string $image_url = null;
