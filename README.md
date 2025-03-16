@@ -18,3 +18,14 @@ A simple rentals listing app, that allowed:
 - I'm using livewire, so all the componenets/controllers are under ```app/Livewire```
 - I added one more middleware ```app/Http/Middleware/AdminMiddleware.php```, to control the routes of the admins (creating/editing rentals & showing all bookings)
 - I used alpine with livewire to add some interactivity whle booking
+
+
+## Demo
+You can check it here: [https://rentals-main-dh2i3f.laravel.cloud/rentals](https://rentals-main-dh2i3f.laravel.cloud/rentals)
+ A normal user:
+ email: user@example.com
+ password: useruser
+
+ An Admin:
+ email: admin@example.com
+ password: adminadmin
