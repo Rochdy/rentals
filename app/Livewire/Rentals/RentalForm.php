@@ -3,7 +3,6 @@
 namespace App\Livewire\Rentals;
 
 use App\Models\Rental;
-use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 use Illuminate\Support\Str;
@@ -14,16 +13,12 @@ class RentalForm extends Component
 
     public ?Rental $rental;
 
-    #[Validate('required|string|max:255')]
     public string $title;
 
-    #[Validate('required|string')]
     public string $description;
 
-    #[Validate('required|numeric|min:0')]
     public float $price;
 
-    #[Validate('required|image|max:1000')]
     public $image;
 
     public ?string $image_url = null;
@@ -44,7 +39,12 @@ class RentalForm extends Component
 
     public function save()
     {
-        $this->validate();
+        $this->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'price' => 'required|numeric|min:0',
+            'image' => $this->isEditing ? 'nullable|image|max:1000' : 'required|image|max:1000'
+        ]);
 
         if ($this->image) {
             $uniqueId = Str::uuid();

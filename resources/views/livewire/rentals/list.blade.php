@@ -4,7 +4,7 @@
     <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
         @forelse($rentals as $rental)
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img class="w-full h-48 object-cover" src="{{ Storage::url($rental->image_url ?? 'images/default-rental-image.jpg') }}" alt="{{ $rental->title }}">
+                <img class="w-full h-48 object-cover" src="{{ Storage::url($rental->image_url) }}" alt="{{ $rental->title }}">
 
                 <div class="p-4">
                     <h2 class="text-gray-900 text-xl font-semibold">{{ Str::of($rental->title)->limit(20); }}</h2>

@@ -18,7 +18,7 @@
             </a>
         </div>
         @endif
-        <img class="w-full h-64 object-cover" src="{{ Storage::url($rental->image_url ?? 'images/default-rental-image.jpg') }}" alt="{{ $rental->title }}">
+        <img class="w-full h-64 object-cover" src="{{ Storage::url($rental->image_url) }}" alt="{{ $rental->title }}">
 
         <div class="p-6">
             <h1 class="text-3xl font-bold text-gray-900">{{ $rental->title }}</h1>
