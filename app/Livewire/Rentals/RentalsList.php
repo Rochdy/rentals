@@ -13,7 +13,7 @@ class RentalsList extends Component
     public function render()
     {
         return view('livewire.rentals.list', [
-            'rentals' => Rental::latest()->paginate(12)
+            'rentals' => Rental::latest('id')->paginate(12)
         ]);
     }
 }
