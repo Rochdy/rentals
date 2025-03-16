@@ -22,10 +22,12 @@ A simple rentals listing app, that allowed:
 
 ## Demo
 You can check it here: [https://rentals-main-dh2i3f.laravel.cloud/rentals](https://rentals-main-dh2i3f.laravel.cloud/rentals)
- A normal user:
- email: user@example.com
- password: useruser
 
- An Admin:
- email: admin@example.com
- password: adminadmin
+A normal user:
+email: user@example.com
+password: useruser
+ 
+
+An Admin:
+email: admin@example.com
+password: adminadmin
